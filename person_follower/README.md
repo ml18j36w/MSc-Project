@@ -1,10 +1,6 @@
 ## About the Project
 
-This project contains packages for use with ROS that enable a robot to detect a person and follow them in real time through a known environment. Obstacle avoidance is also incorporated into the person following module, and a safe distance between the robot and the person being followed is maintained at all times.
-
-## Installing the package
-
-Full installation instructions can be found at https://gitlab.com/sc16sw/person_follower_robot/wikis/Installation-Process
+This project contains packages for use with ROS that enable a robot to welcoming visitors in real time through a known environment.
 
 ## Running the Software
 
@@ -25,18 +21,9 @@ Full installation instructions can be found at https://gitlab.com/sc16sw/person_
 
 # How to run the software
 
-In order to use the project, two different nodes must run as follows:
-
-1. The first node that is required is the person detection module. In order to run the person detection module, open a terminal and enter the following command:
 ```
-rosrun person_follower human_detection.py
+rosrun person_follower welcoming.py
 ```
+The robot will recognise differnt visitors and interact with users by command.
 
-2. The second node that is required is the person follower module. In order to run the person follower module, open a terminal and enter the following command:
-```
-rosrun person_follower follower.py
-```
 
-The person detection module publishes a `detections` topic, over which messages containing the centre coordinate of every detection can be accessed.
-
-The person follower module subscribes to the `detections` topic in order to receive the detection messages. The centre points of detections are then used for pose estimation, and the trajectory that the robot should follow is calculated.
