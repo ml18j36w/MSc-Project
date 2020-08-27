@@ -16,6 +16,8 @@ pal_face_detector_opencv is used for detecting human faces and storing them for 
 
 # How to use
 
+clone pal_face_detector_opencv and person_follower into yout catkin workspace/src, and use catkin build to build the packages
+
 There are pre-stored human faces in the person_follower repository for testing. If you want test different human face, simply change the value of "friend_image" and "frame" in welcoming.py into the images of known face and the face you want to be recognised. 
 
 1. use pal_face_detector_opencv to capture faces from robot camera
